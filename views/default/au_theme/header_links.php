@@ -26,7 +26,8 @@ echo '<span class="highlight">' . elgg_echo('au_theme:loginhelp') . '</span><br>
     if ($_SESSION['last_forward_from']) {
       $url = $_SESSION['last_forward_from'];
     }
-    $cas_url = au_cas_auth_build_cas_url($url, FALSE);
+
+	$cas_url = \AU\CASAuth\build_cas_url($url, FALSE);
   
     echo elgg_view('output/url', array(
   		'text' => elgg_echo('au_theme:au:login'),

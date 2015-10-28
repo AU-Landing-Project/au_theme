@@ -78,7 +78,7 @@ __BODY;
 
 $body .= elgg_view('page/elements/foot');
 
-$head = elgg_view('page/elements/head', $vars);
+$head = elgg_view('page/elements/head', $vars['head']);
 
 echo elgg_view("page/elements/html", array("head" => $head, "body" => $body));
 
